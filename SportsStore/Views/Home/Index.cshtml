@@ -6,8 +6,8 @@
 @foreach (var product in Model ?? Enumerable.Empty<Product>())
 {
     <div>
-        <h2>@product.Name</h2>
-        <p>@product.Description</p>
-        <p>@product.Price</p>
+        <h3>@product.Name</h3>
+        @product.Description
+        <h4>@product.Price?.ToString("c")</h4>
     </div>
 }
